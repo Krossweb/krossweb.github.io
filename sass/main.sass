@@ -1,0 +1,529 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900')
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+::selection
+	background-color: $black
+	color: $accent
+::-moz-selection
+	background-color: $black
+	color: $accent
+img::selection
+	background: 0 0
+img::-moz-selection
+	background: 0 0
+
+a,
+li,
+ul,
+button,
+input
+	text-decoration: none
+	list-style: none
+	background: 0 0
+	outline: none
+	border: 0
+
+a:focus, a:hover
+	text-decoration: none
+button
+	cursor: pointer
+button:focus
+	outline: none !important
+
+/* Settings */
+
+/* <a> */
+.a_
+	+transition(.2s opacity, .2s color)
+.a_:focus
+	opacity: 0.6
+.as_
+	opacity: 1 !important
+
+.a_orange
+	color: $accent !important
+.a_purple
+	color: $bg !important
+.a_cyan
+	color: $cyan !important
+.a_white
+	color: white !important
+
+.as_l:hover
+	color: white !important
+.as_d:hover
+	color: $bg !important
+.as_c:hover
+	color: $cyan !important
+.as_r:hover
+	color: $accent !important
+
+.s18_
+	font-size: 18px
+.s20_
+	font-size: 20px
+.s22_
+	font-size: 22px
+.s24_
+	font-size: 24px
+.s26_
+	font-size: 26px
+.s28_
+	font-size: 28px
+.s30_
+	font-size: 30px
+.s40_
+	font-size: 40px
+.s50_
+	font-size: 50px
+
+/* </a> */
+
+.uppercase_
+	text-transform: uppercase
+.lowercase
+	text-transform: lowercase
+
+.f9_
+	font-weight: 900
+.f7_
+	font-weight: 700
+.f5_
+	font-weight: 500
+
+.link_
+	position: relative
+	+transition(.3s padding-left, .3s color, .3s opacity)
+	&:hover
+		padding-left: 12px
+	&:before
+		font-family: 'FontAwesome', sans-serif
+		font-size: 18px
+		position: absolute
+		content: '\f105'
+		left: 0
+		top: -3px
+		padding-left: 12px
+		opacity: 0
+		color: white
+		+transition(.3s padding-left, .3s color, .3s opacity)
+	&:hover:before
+		color: $accent
+		opacity: 1
+		padding-left: 0
+
+.img_
+	position: relative
+	overflow: hidden
+
+.img_ img
+	height: 100%
+	position: absolute
+	top: 50%
+	left: 50%
+	+transform(translate(-50%, -50%))
+
+.but_
+	display: block !important
+	position: relative
+	overflow: hidden
+.b_
+	display: block
+	position: absolute
+	z-index: 5
+	width: 0
+	height: 0
+	+transform(translate(-50%, -50%))
+
+.gut_
+	cursor: pointer
+	display: block !important
+	position: relative
+	overflow: hidden
+.g_
+	display: block
+	position: absolute
+	width: 0
+	height: 0
+
+.circle_
+	-webkit-background-clip: padding-box
+	-moz-background-clip: padding
+	background-clip: padding-box
+	+border-radius(100%)
+
+.border_
+	-webkit-background-clip: padding-box
+	-moz-background-clip: padding
+	background-clip: padding-box
+
+.align_c
+	text-align: center
+.align_l
+	text-align: left
+.align_r
+	text-align: right
+
+.left_
+	float: left
+.right_
+	float: right
+
+.line_
+	display: flex
+
+.online_
+	white-space: nowrap
+
+.touch_
+	pointer-events: none
+
+.fill_
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.center_
+	position: absolute
+	top: 50%
+	left: 50%
+	+transform(translate(-50%, -50%))
+
+.center_h
+	position: absolute
+	left: 50%
+	+transform(translate(-50%, 0))
+
+.center_v
+	position: absolute
+	top: 50%
+	+transform(translate(0, -50%))
+
+.fullcontainer_
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+
+.overlay_
+	position: fixed
+	margin: 0
+	padding: 0
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: black
+	opacity: 0
+	z-index: 300
+	+transition(1s all)
+
+.clearfix_
+	clear: both !important
+
+.container_
+	position: relative
+	width: $width
+	margin: auto
+
+.ghost_
+	pointer-events: none
+.pointer_
+	cursor: pointer
+
+.uppercase_
+	text-transform: uppercase
+.lowercase_
+	text-transform: lowercase
+
+.raleway_
+	font-family: 'Raleway', sans-serif
+.roboto_
+	font-family: "roboto-example", sans-serif
+
+.hide_
+	display: none
+.show_
+	display: block
+
+.parallax_
+	position: relative
+
+/// // / Prealoder
+
+.load
+	overflow: hidden
+	z-index: 999
+	width: 150px
+	height: 100px
+	div
+		position: relative
+		left: 0
+		width: 0
+		height: 10px
+		background-color: $accent
+		margin-bottom: 35px
+		+border-radius(3px)
+	div:last-child
+		margin-bottom: 0
+.l_line1
+	+animation(loading, 1s, infinite, ease, 0, forwards)
+.l_line2
+	+animation(loading, 1s, infinite, ease, .1s, forwards)
+.l_line3
+	+animation(loading, 1s, infinite, ease, .2s, forwards)
+
+@keyframes loading
+	0%
+		width: 0
+	50%
+		width: 100px
+		left: 50px
+	100%
+		width: 0
+		left: 0
+
+/// // / Main
+
+#main
+	display: none
+	position: relative
+	height: 100%
+	width: 100%
+
+/// Header
+
+.header
+	position: absolute
+	bottom: -100px
+	background-color: white
+	height: 100px
+	width: 100%
+	z-index: 500
+	+transition(1s box-shadow)
+
+.affix
+	position: fixed !important
+	top: 0
+	left: 0
+	bottom: auto
+	+box-shadow(0 0 10px rgba(0,0,0,0.1))
+
+.logo
+	position: relative
+	top: 15px
+	letter-spacing: -2px
+	+transition(.4s letter-spacing cubic-bezier(.8,-0.5,.2,1.5), .3s color, .3s opacity)
+	&:hover
+		letter-spacing: 0.3px
+
+// Navbar
+
+.navbar_
+	position: absolute
+	right: 0
+	top: 0
+	a
+		position: relative
+		display: block
+		height: 100px
+		padding: 35px 15px
+	button
+		height: 100px
+		padding-left: 10px
+		padding-bottom: 5px
+
+// Megamenu
+
+.megamenu_btn
+	position: relative
+	+transition(.5s box-shadow cubic-bezier(.7, 0, .3, 1), .3s color)
+	+box-shadow(inset 0 0 0 $bg)
+	&:after
+		font-family: 'FontAwesome', sans-serif
+		padding-left: 5px
+		content: '\f0d7'
+.megamenu_btn_active
+	color: white !important
+	+box-shadow(inset 0 -100px 0 $bg)
+
+.megamenu
+	position: absolute
+	top: 100px
+	width: 100%
+	height: 0
+	background-color: $bg
+	+transition(.8s height cubic-bezier(.8,0,.2,1), .8s box-shadow)
+.megamenu_active
+	height: 300px
+	+box-shadow(0 20px 30px rgba(0,0,0,0.1))
+
+// Search
+
+.search_btn
+	&:after
+		font-family: 'FontAwesome', sans-serif
+		padding-left: 5px
+		content: '\f002'
+
+/// Sections
+
+#welcome_block
+	background-color: white
+	z-index: 501
+
+.welcome
+	z-index: 505
+	padding-top: 100px
+	top: -100px
+	background-color: white
+
+.welcome_text
+	overflow: hidden
+	display: block
+	width: 480px
+	height: 290px
+	font-size: 9em
+	color: $accent
+	text-shadow: -7px 7px 0 $bg
+	line-height: 115px
+	span
+		position: relative
+		left: -480px
+	span:last-child
+		margin-left: 10px
+		font-size: 1.4em
+		line-height: 180px
+
+.line_upper
+	position: relative
+	z-index: 5
+	width: 0
+	height: 8px
+	background-color: $accent
+.line_under
+	position: relative
+	z-index: 1
+	top: -3px
+	left: -3px
+	width: 0
+	height: 8px
+	background-color: $bg
+@keyframes welcome_lineup
+	from
+		width: 0
+	to
+		width: 100%
+
+.text_under
+	overflow: hidden
+	position: relative
+	top: -4px
+	span
+		position: relative
+		top: -45px
+
+.order_site_welcome
+	display: none
+	a
+		display: block
+		opacity: 0
+		width: 45%
+		float: left
+		margin: 12px
+		padding: 5px 0
+		border: 3px solid $accent
+		+border-radius(5px)
+		+transition(.2s background-color, .2s transform, .2s color)
+	a:hover
+		background-color: $accent
+		color: white !important
+	a:active
+		+transform(scale(0.9))
+
+.bg
+	position: relative
+	overflow: hidden
+	width: 100%
+	height: 600px
+	z-index: -1
+
+.services
+	position: absolute
+	top: 50%
+
+.service
+	position: relative
+	float: left
+	width: 280px
+	margin-right: 45px
+	height: 400px
+	background-color: white
+	+border-radius(10px)
+	+box-shadow(0 10px 20px rgba(0,0,0,0.2))
+.service:last-child
+	margin-right: 0
+
+/* JS */
+
+.overlay_active
+	opacity: 0.8
+	visibility: visible
+
+.center_transform
+	+transform(translate(-50%, -50%))
+
+// Всегда в конце
+@import "media"
